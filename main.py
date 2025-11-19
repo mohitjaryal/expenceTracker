@@ -46,7 +46,7 @@ def view_expenses():
         print(f"{e['date']} | {e['category']:<10} | {e['description']:<20} | ${e['amount']}")
         total += float(e['amount'])
     print("-" * 50)
-    print(f"Total: ${total:.2f}\n")
+    print(f"Total: ₹{total:.2f}\n")
 
 def search_by_category():
     category = input("Enter category to search: ").strip().lower()
