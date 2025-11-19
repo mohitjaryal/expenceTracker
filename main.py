@@ -26,13 +26,13 @@ def add_expense():
     date = datetime.now().strftime("%Y-%m-%d")
     category = input("Enter category (food, transport, etc.): ").strip()
     description = input("Enter description: ").strip()
-    amount = input("Enter amount: ").strip()
+    amount = input("Enter amount (₹): ").strip()
 
     expense = {'date': date, 'category': category, 'description': description, 'amount': amount}
     expenses = load_expenses()
     expenses.append(expense)
     save_expenses(expenses)
-    print("Expense added!")
+    print("✅ Expense added!")
 
 def view_expenses():
     expenses = load_expenses()
@@ -43,7 +43,7 @@ def view_expenses():
     print("-" * 50)
     total = 0
     for e in expenses:
-        print(f"{e['date']} | {e['category']:<10} | {e['description']:<20} | ${e['amount']}")
+        print(f"{e['date']} | {e['category']:<10} | {e['description']:<20} | ₹{e['amount']}")
         total += float(e['amount'])
     print("-" * 50)
     print(f"Total: ₹{total:.2f}\n")
@@ -55,7 +55,7 @@ def search_by_category():
     if results:
         print(f"\nExpenses in '{category}':")
         for e in results:
-            print(f"{e['date']} | {e['description']} | ${e['amount']}")
+            print(f"{e['date']} | {e['description']} | ₹{e['amount']}")
     else:
         print("No expenses found for that category.")
 
@@ -63,7 +63,7 @@ def search_by_category():
 
 def main():
     while True:
-        print("\n=== Expense Tracker ===")
+        print("\n=== Expense Tracker (₹) ===")
         print("1. Add Expense")
         print("2. View Expenses")
         print("3. Search by Category")
