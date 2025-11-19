@@ -3,7 +3,7 @@ from datetime import datetime
 
 FILENAME = "expenses.csv"
 
-# --- Helper functions 
+# Helper functions 
 
 def load_expenses():
     expenses = []
