@@ -63,7 +63,7 @@ def search_by_category():
 
 def main():
     while True:
-        print("\n=== Expense Tracker (₹) ===")
+        print("\nExpense Tracker (₹) ")
         print("1. Add Expense")
         print("2. View Expenses")
         print("3. Search by Category")
