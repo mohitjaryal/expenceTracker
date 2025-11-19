@@ -78,7 +78,7 @@ def main():
         elif choice == '3':
             search_by_category()
         elif choice == '4':
-            print("Goodbye! 👋")
+            print("Goodbye! ")
             break
         else:
             print("Invalid choice. Try again.")
