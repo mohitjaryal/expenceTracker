@@ -32,7 +32,7 @@ def add_expense():
     expenses = load_expenses()
     expenses.append(expense)
     save_expenses(expenses)
-    print("✅ Expense added!")
+    print("Expense added!")
 
 def view_expenses():
     expenses = load_expenses()
