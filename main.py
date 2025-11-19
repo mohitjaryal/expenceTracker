@@ -1,3 +1,5 @@
+# Expense tracker using Python
+
 import csv
 from datetime import datetime
 
