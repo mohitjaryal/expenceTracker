@@ -39,7 +39,7 @@ def view_expenses():
     if not expenses:
         print("No expenses recorded yet.")
         return
-    print("\n📋 Expense List:")
+    print("\nExpense List:")
     print("-" * 50)
     total = 0
     for e in expenses:
